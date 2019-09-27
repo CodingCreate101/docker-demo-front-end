@@ -5,8 +5,11 @@ const errorElement = document.querySelector(".error-message");
 const loadingElement = document.querySelector(".loading");
 const mewsElement = document.querySelector(".mews");
 const loadMoreElement = document.querySelector("#loadMore");
-// const API_URL = window.location.hostname === '127.0.0.1' ? 'http://localhost:5000/v2/mews' : 'https://meower-api.now.sh/v2/mews';
-const API_URL = "https://meower-api.now.sh/v2/mews";
+
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost/v2/mews"
+    : "http://172.105.34.161/v2/mews";
 
 let skip = 0;
 let limit = 5;
